@@ -1,0 +1,139 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>HTML</title>
+        <meta charset="utf-8">
+        <meta https-equiv="refresh" content="120">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="style.css">
+      <script src="script.js"></script>
+      <style>
+          body {
+    font-family: Serif;
+    padding: 20px;
+    background: white;
+    box-shadow: 0px 0px 10px 10px hsla(0,0,0,0.2);
+    letter-spacing: 2px;
+    word-spacing: 5px;
+    box-shadow: 0px 0px 10px hsl(0px, 100%, 100%);
+    }
+.container{
+    background: #f2f2f2;
+    padding: 10px;
+    padding-right: 40px;
+    border-radius: ;
+    box-shadow: 0px 0px 10px 10px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    border:unset;
+    
+    
+}
+input{
+width:100%;
+padding: 15px;
+border-radius: 5px;
+border:none;
+font-family:monaco;
+}
+.terms{
+    margin-bottom:20px;
+}
+.terms input[type="checkbox"]{
+    width: 15px;
+    vertical-align: middle;
+    height: 20px;
+    margin-right:2px;
+}
+.terms label{
+    vertical-align:middle;
+}
+button {
+ padding: 15px 25px;
+ border: unset;
+ border-radius: 15px;
+ color: #212121;
+ z-index: 1;
+ background: #e8e8e8;
+ position: relative;
+ font-weight: 1000;
+ font-size: 17px;
+ -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+ box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+ transition: all 250ms;
+ overflow: hidden;
+}
+
+button::before {
+ content: "";
+ position: absolute;
+ top: 0;
+ left: 0;
+ height: 100%;
+ width: 0;
+ border-radius: 15px;
+ background-color: #212121;
+ z-index: -1;
+ -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+ box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+ transition: all 250ms
+}
+
+button:hover {
+ color: #e8e8e8;
+}
+
+button:hover::before {
+ width: 100%;
+ 
+}
+h3{
+    font-weight:1000;
+    text-align: center;
+}
+footer{
+    text-align: center;
+    color:#822035;
+    background: #ffdd55;
+    border-radius: 30px;
+    
+    }
+      </style>
+      <script>
+          function checkPasswordMatch() {
+    var password = document.getElementById("password").value;
+    var confirmPassword = document.getElementById("confirm-password").value;
+    if(password != confirmPassword) {
+        document.getElementById("confirm-password").style.border = "red";
+        document.getElementById("error").innerHTML = "Passwords do not match!";
+        }else{
+            document.getElementById("confirm-password").style.border = " green";
+  document.getElementById("error").innerHTML = "";
+        }
+    }
+
+      </script>
+    </head>
+    <body>
+        <div class="container">
+            <h3>SIGN-UP</h3>
+            <form>
+                <input type="text" placeholder="Username"  required></br></br>
+                 <input type="text" placeholder="First-name" required></br></br>
+                <input type="text" placeholder="Last-name"  required></br></br>
+                <input type="email" placeholder="E-mail"  required></br></br>
+                <input type="password" placeholder="Password" id="password" name="password" required></br></br>
+                <input type="password" id="confirm-password" name="password" placeholder="Confirm password" oninput="checkPasswordMatch();" required></br></br>
+                <span id="error"></span>
+                <div class="terms"><input type="checkbox" name="terms" id="checkbox"><label for="terms">I accepts the terms and conditions</label></br></br>
+               
+                <button type="submit">Sign up</button></div>
+                <p style="text-align:center; padding:10px;">already have an account Sign up <a href="#">here</a></p>
+             </div>   
+            </form>
+        
+         <p style="font-weight:bold;">Contact us</p>
+           <a href="tel:+2348037177814">Call</a></br><a href="https://www.facebook.com/alhajifaruk001">Facebook</a></br>
+           <a href="whatsapp:+2348037177814">Whatsapp</a></br></br>
+    </body>
+   <footer><i><marquee>Developed by FK TECH</marquee></i></footer>
+</html>
